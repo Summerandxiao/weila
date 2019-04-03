@@ -1,0 +1,18 @@
+@import "@/libac/reset.scss";
+.header{
+    @include flexbox();
+    @include justify-content(space-around);
+    @include align-items();
+    @include color(#999);
+     border-bottom:1px #666 solid;
+   
+    img{
+      @include rect(auto,0.2rem);
+      
+    }
+    input{
+        @include border-radius(20px);
+        @include font-size(0.04rem);
+        @include padding(2px);
+    }
+}

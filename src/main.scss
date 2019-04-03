@@ -1,0 +1,54 @@
+@import "@/libac/reset.scss";
+html, body, #root, .container {
+    @include rect(100%, 100%); // width: 100%;height:100%;
+  }
+.App{
+    @include rect(100%, 100%);
+    @include flexbox();
+    @include flex-direction(column);
+    .box{
+     
+        @include flex(1,column); // flex: 1;
+        @include rect(100%, auto);
+        @include flexbox();
+        @include flex-direction(column);
+       
+        .header{
+            @include rect(100%,0.44rem);
+            
+        }
+        .content{
+            @include flex(1,column);
+        }
+    }
+    .footer{
+        @include rect(100%, 0.5rem);
+        @include background-color(#efefef);
+        ul{
+            @include flexbox();
+            @include rect(100%,100%);
+            a{
+               @include text-color(#333) ;
+               @include flex();
+               @include rect(auto,100%);
+               @include font-size(0.14rem);
+               @include justify-content();
+               @include align-items();
+               @include flexbox();
+               @include flex-direction(column);
+              
+               &.active {
+                @include text-color(#ff8200);
+              }
+            }
+            .iconfont{
+                @include font-size(0.2rem);
+                &.active {
+                    @include text-color(#ff8200);
+                  }
+                }
+           
+        }
+
+    }
+}
